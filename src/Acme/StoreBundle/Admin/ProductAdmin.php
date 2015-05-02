@@ -47,7 +47,7 @@ class ProductAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->addIdentifier('categories', null, array('label' => 'Category'))
+            ->addIdentifier('category', null, array('label' => 'Category'))
             ->addIdentifier('price', null)
             ->addIdentifier('title', null, array('label' => 'Title'));
             //->add('slug', null, array('label' => 'URL'));

@@ -48,8 +48,8 @@ class CategoryAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->addIdentifier('title', null, array('label' => 'Category title'))
-            ->add('slug', null, array('label' => 'URL'));
+            ->addIdentifier('title', null, array('label' => 'Category title'));
+            //->add('slug', null, array('label' => 'URL'));
     }
 
     /**

@@ -126,4 +126,8 @@ protected $products;
     {
         return $this->products;
     }
+
+    public function __toString() {
+        return $this->title;
+    }
 }
