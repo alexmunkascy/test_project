@@ -1,8 +1,14 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-   {% for product in products %}
-       <div class="mosaic-box">
-           <h6><a href="{{ path('acme_store_show_product', { 'id':product.id}) }}">{{ product.title }}</a></h6>
-       </div>
-   {% endfor %}
+    <div class="row">
+        <div class="span4">
+            <ul class="nav nav-list">
+                <li class="nav-header">Products:</li>
+                {% for product in products %}
+                    <li><a href="{{ path('acme_store_show_product',
+                        { 'id':product.id}) }}">{{ product.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 {% endblock %}

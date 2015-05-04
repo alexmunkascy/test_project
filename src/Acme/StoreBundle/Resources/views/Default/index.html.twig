@@ -1,12 +1,25 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-    {% for category in categories %}
-        <div class="alert alert-success" role="alert"">
-            <header>
-                <h5><a href="{{ path('acme_store_show_category', { 'id':category.id}) }}">{{ category.title }}</a> </h5>
-            </header>
-        </div>
+    <div class="row">
+        <div class="span4">
+            <p class="nav-header"> Categories:</p>
+            <ul class="nav nav-list">
+            {% for category in categories %}
+                <li>
+            <div class="alert alert-success row">
+                <h4><p class="btn"><a href="{{ path('acme_store_show_category', { 'id':category.id}) }}">{{ category.title }}</a></p></h4>
+                </div>
+                </li>
     {% else %}
         <p>There are not any category</p>
     {% endfor %}
+            </ul>
+        </div>
+    </div>
+        <!--<div class="span8">
+            <p class="nav-header">Products:</p>
+            {% block category %}
+            {% endblock %}
+        </div> !>
+    </div>
 {% endblock %}

@@ -2,9 +2,13 @@ acme_store_homepage:
     path:     /
     defaults: { _controller: AcmeStoreBundle:Default:index }
 
+acme_store_home:
+    path:     /store
+    defaults: { _controller: AcmeStoreBundle:Default:index }
+
 acme_store_show_category:
     path:     /show_category/{id}
-    defaults: { _controller: AcmeStoreBundle:Default:show_category }
+    defaults: { _controller: AcmeStoreBundle:Default:show_category}
 
 acme_store_show_product:
     path:    /show_product/{id}
